@@ -62,7 +62,7 @@ export class AkashMl implements INodeType {
 
 			// Chat Completions
 			{
-				displayName: 'Model',
+				displayName: 'Model Name or ID',
 				name: 'model',
 				type: 'options',
 				typeOptions: {
@@ -75,7 +75,7 @@ export class AkashMl implements INodeType {
 					},
 				},
 				default: '',
-				description: 'The model to use',
+				description: 'The model to use. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
 			},
 			{
 				displayName: 'Messages',
@@ -184,7 +184,7 @@ export class AkashMl implements INodeType {
 					},
 				},
 				default: true,
-				description: 'Whether to return all models in a single item',
+				description: 'Whether to return all results or only up to a given limit',
 			},
 		],
 	};
