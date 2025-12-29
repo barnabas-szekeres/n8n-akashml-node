@@ -1,0 +1,15 @@
+{
+	"node": "n8n-nodes-akashml",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["AI", "Development", "Developer Tools"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/org/repo?tab=readme-ov-file"
+			}
+		]
+	}
+}
+
+
