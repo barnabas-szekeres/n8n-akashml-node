@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-akashml",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "This is an n8n community node. It lets you use the AkashML API (OpenAI-compatible) in your n8n workflows.",
     "license": "MIT",
     "homepage": "https://github.com/barnabas-szekeres/n8n-akashml-node",
@@ -17,15 +17,15 @@
         "type": "git",
         "url": "git@github.com:barnabas-szekeres/n8n-akashml-node.git"
     },
-   "scripts": {
-		"build": "n8n-node build",
-		"build:watch": "tsc --watch",
-		"dev": "n8n-node dev",
-		"lint": "n8n-node lint",
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
         "lint:fix": "n8n-node lint --fix",
-		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
-	},
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
     "files": [
         "dist"
     ],
