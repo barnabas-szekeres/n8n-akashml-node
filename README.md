@@ -1,5 +1,7 @@
 # n8n-nodes-akashml
 
+![n8n AkashML Node Cover](images/n8n-cover.png)
+
 This is an n8n community node. It lets you use the AkashML API (OpenAI-compatible) in your n8n workflows.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
