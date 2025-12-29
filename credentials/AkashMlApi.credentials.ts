@@ -2,6 +2,7 @@ import type {
 	IAuthenticateGeneric,
 	ICredentialTestRequest,
 	ICredentialType,
+	Icon,
 	INodeProperties,
 } from 'n8n-workflow';
 
@@ -9,6 +10,8 @@ export class AkashMlApi implements ICredentialType {
 	name = 'akashMlApi';
 
 	displayName = 'AkashML API';
+
+	icon: Icon = 'file:../icons/akashml.svg';
 
 	documentationUrl = 'https://docs.akashml.com';
 
