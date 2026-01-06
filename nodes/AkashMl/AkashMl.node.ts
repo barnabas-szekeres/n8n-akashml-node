@@ -51,11 +51,6 @@ export class AkashMl implements INodeType {
 						value: 'chatCompletions',
 						action: 'Create a chat completion',
 					},
-					{
-						name: 'Models',
-						value: 'models',
-						action: 'List models',
-					},
 				],
 				default: 'chatCompletions',
 			},
@@ -173,19 +168,6 @@ export class AkashMl implements INodeType {
 				description: 'Nucleus sampling probability',
 			},
 
-			// Models
-			{
-				displayName: 'Return All',
-				name: 'returnAll',
-				type: 'boolean',
-				displayOptions: {
-					show: {
-						operation: ['models'],
-					},
-				},
-				default: true,
-				description: 'Whether to return all results or only up to a given limit',
-			},
 		],
 	};
 
@@ -202,31 +184,6 @@ export class AkashMl implements INodeType {
 		for (let i = 0; i < items.length; i++) {
 			try {
 				const operation = this.getNodeParameter('operation', i) as string;
-
-				if (operation === 'models') {
-					const response = (await akashMlApiRequest.call(this, 'GET', '/models')) as unknown as {
-						data?: unknown[];
-					};
-
-					const returnAll = this.getNodeParameter('returnAll', i) as boolean;
-
-					if (returnAll) {
-						returnData.push({
-							json: response as unknown as IDataObject,
-							pairedItem: { item: i },
-						});
-					} else {
-						const models = Array.isArray(response?.data) ? response.data : [];
-						for (const model of models) {
-							returnData.push({
-								json: { model } as unknown as IDataObject,
-								pairedItem: { item: i },
-							});
-						}
-					}
-
-					continue;
-				}
 
 				if (operation === 'chatCompletions') {
 					const model = this.getNodeParameter('model', i) as string;
